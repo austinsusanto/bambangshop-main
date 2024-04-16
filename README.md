@@ -61,7 +61,7 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [x] Commit: `Implement add function in Subscriber repository.`
     -   [x] Commit: `Implement list_all function in Subscriber repository.`
     -   [x] Commit: `Implement delete function in Subscriber repository.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-1" questions in this README.
+    -   [x] Write answers of your learning module's "Reflection Publisher-1" questions in this README.
 -   **STAGE 2: Implement services and controllers**
     -   [ ] Commit: `Create Notification service struct skeleton.`
     -   [ ] Commit: `Implement subscribe function in Notification service.`
@@ -83,6 +83,12 @@ This is the place for you to write reflections:
 ### Mandatory (Publisher) Reflections
 
 #### Reflection Publisher-1
+
+1. If there will be only one type of subscriber, then an interface is not needed and a single model struct will be enough. This is because there will be no other kind of subscriber (receiver) model that will be used in the application which is very relevant to the case in Bambang Shop. Although this approach is easier and shorter codewise, the option to add a new type of receiver will be lost. We will need to make a new trait and change written codes to make this option available again.
+
+2. Using a Vec to store id of Product and url of Subscriber is possible and sufficient. But it makes the program slower because a linear search will have to be done to add or delete a Product or a Subscriber. Using a Vec for this case also makes room for error due to the elements non-unique behavior inside a Vec.
+
+3. The use of a DashMap is not mandatory and it can be replaced by the Singleton Pattern implementation. But a DashMap helps a lot by providing a thread-safety HashMap for concurrent access. Even though this is also achievable using the Singleton Pattern, it is harder to make a fully thread-safe implementation and potentially creates new problems in the program.
 
 #### Reflection Publisher-2
 
