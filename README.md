@@ -68,7 +68,7 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [x] Commit: `Implement subscribe function in Notification controller.`
     -   [x] Commit: `Implement unsubscribe function in Notification service.`
     -   [x] Commit: `Implement unsubscribe function in Notification controller.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
+    -   [x] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
 -   **STAGE 3: Implement notification mechanism**
     -   [ ] Commit: `Implement update method in Subscriber model to send notification HTTP requests.`
     -   [ ] Commit: `Implement notify function in Notification service to notify each Subscriber.`
@@ -91,5 +91,11 @@ This is the place for you to write reflections:
 3. The use of a DashMap is not mandatory and it can be replaced by the Singleton Pattern implementation. But a DashMap helps a lot by providing a thread-safety HashMap for concurrent access. Even though this is also achievable using the Singleton Pattern, it is harder to make a fully thread-safe implementation and potentially creates new problems in the program.
 
 #### Reflection Publisher-2
+
+1. The separation of "Service" and "Repository" from "Model" has a lot of important reasons behind it. First, it fulfills the design principle of Single Responsibility (SRP) where a file/class should only be responsible of one thing. This helps in maintaining the project from being too stuffed into one place and helps with error handling. Secondly, this implementation enforces the concept of Separation of Concerns (SoC) where the data manipulation and proccesses (Service and Repository) is separated from the more sensitive and crucial part of the program (Model).
+
+2. If we only use the Model, the code will most probably be more complex. This applies to all the models in the tutorial (Product, Subscriber, and Notification). Eventhough some parts might be relatively less complex like imports and the mod (because no connections between Model, Repository, and Service aren't needed), but most of the other code will be much more complex due to the lack of SRP and SoC implementation.
+
+3. Postman is a great tool on testing the functionality of our program. It provides complete access to data and statistics of our program (Response, Cookies, Headers, Response Time, Data Usage, etc.). I'm also interested in trying other request type like PUT, PATCH, DELETE, OPTIONS because we haven't learnt much of it in the courses.
 
 #### Reflection Publisher-3
