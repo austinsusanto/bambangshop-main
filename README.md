@@ -74,7 +74,7 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [x] Commit: `Implement notify function in Notification service to notify each Subscriber.`
     -   [x] Commit: `Implement publish function in Program service and Program controller.`
     -   [x] Commit: `Edit Product service methods to call notify after create/delete.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-3" questions in this README.
+    -   [x] Write answers of your learning module's "Reflection Publisher-3" questions in this README.
 
 ## Your Reflections
 
@@ -99,3 +99,9 @@ This is the place for you to write reflections:
 3. Postman is a great tool on testing the functionality of our program. It provides complete access to data and statistics of our program (Response, Cookies, Headers, Response Time, Data Usage, etc.). I'm also interested in trying other request type like PUT, PATCH, DELETE, OPTIONS because we haven't learnt much of it in the courses.
 
 #### Reflection Publisher-3
+
+1. In this tutorial, we use the Push model where the publisher pushes data to the subscriber which happens every time and update happened so the subscriber doesn't have to pull data manually from the publisher.
+
+2. If we used the Pull model, the subscriber will only get the update/notification when they make a new request manually which makes the application less interactive. But, the Pull model is more simple and efficient because the subscriber can control over their data access and not mandated to take the new data. It also helps in reducing coupling between the subscriber and publisher because the requests made by the subscriber doesn't access the publisher.
+
+3. If we didn't use multi-threading in the notification proccess, the subscriber will get a late notification. This can happen because the program will wait for one notification to be sent to one subscriber before sending it to the next one. The latency will get worse if a product has many subscriber.
