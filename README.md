@@ -1,12 +1,15 @@
 # BambangShop Publisher App
+
 Tutorial and Example for Advanced Programming 2024 - Faculty of Computer Science, Universitas Indonesia
 
 ---
 
 ## About this Project
+
 In this repository, we have provided you a REST (REpresentational State Transfer) API project using Rocket web framework.
 
 This project consists of four modules:
+
 1.  `controller`: this module contains handler functions used to receive request and send responses.
     In Model-View-Controller (MVC) pattern, this is the Controller part.
 2.  `model`: this module contains structs that serve as data containers.
@@ -35,20 +38,22 @@ You can also make automated functional testing scripts for REST API projects usi
 You can install Postman via this website: https://www.postman.com/downloads/
 
 ## How to Run in Development Environment
+
 1.  Set up environment variables first by creating `.env` file.
     Here is the example of `.env` file:
     ```bash
     APP_INSTANCE_ROOT_URL="http://localhost:8000"
     ```
     Here are the details of each environment variable:
-    | variable              | type   | description                                                |
+    | variable | type | description |
     |-----------------------|--------|------------------------------------------------------------|
     | APP_INSTANCE_ROOT_URL | string | URL address where this publisher instance can be accessed. |
 2.  Use `cargo run` to run this app.
     (You might want to use `cargo check` if you only need to verify your work without running the app.)
 
 ## Mandatory Checklists (Publisher)
--   [ ] Clone https://gitlab.com/ichlaffterlalu/bambangshop to a new repository.
+
+-   [x] Clone https://gitlab.com/ichlaffterlalu/bambangshop to a new repository.
 -   **STAGE 1: Implement models and repositories**
     -   [ ] Commit: `Create Subscriber model struct.`
     -   [ ] Commit: `Create Notification model struct.`
@@ -72,6 +77,7 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [ ] Write answers of your learning module's "Reflection Publisher-3" questions in this README.
 
 ## Your Reflections
+
 This is the place for you to write reflections:
 
 ### Mandatory (Publisher) Reflections
